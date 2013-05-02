@@ -8,14 +8,24 @@ Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'ShowTrailingWhitespace'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'myusuf3/numbers.vim'
-Bundle 'vim-scripts/Rainbow-Parenthsis-Bundle'
+
+" rainbow parentheses
+Bundle 'kien/rainbow_parentheses.vim'
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 
 " clojure
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-foreplay'
 Bundle 'tpope/vim-classpath'
+Bundle 'paredit.vim'
 
 filetype plugin indent on
 
