@@ -12,7 +12,7 @@ export HISTSIZE=5000
 export HISTFILESIZE=1000
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear"
-export PATH=$PATH:$HOME/bin
+export PATH=$HOME/bin:$PATH
 
 case $(uname -s) in
     Darwin|FreeBSD)
