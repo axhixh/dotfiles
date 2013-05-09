@@ -15,15 +15,9 @@ export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear"
 export PATH=$HOME/bin:$PATH
 
 case $(uname -s) in
-    Darwin|FreeBSD)
-        alias ls="ls -hFG"
-    ;;
-    Linux)
-        alias ls="ls --color=always -hF"
-    ;;
-    NetBSD|OpenBSD)
-        alias ls="ls -hF"
-    ;;
+    Darwin|FreeBSD) alias ls="ls -hFG" ;;
+    Linux) alias ls="ls --color=always -hF" ;;
+    NetBSD|OpenBSD) alias ls="ls -hF" ;;
 esac
 
 alias ll="ls -hl"
@@ -32,5 +26,6 @@ alias ...='cd ../..'
 alias df='df -h'
 alias du='du -h -c'
 alias mkdir='mkdir -p -v'
+alias c='clear'
 
 PS1='[\u@\h \W]\$ '
