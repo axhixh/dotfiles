@@ -27,5 +27,6 @@ alias df='df -h'
 alias du='du -h -c'
 alias mkdir='mkdir -p -v'
 alias c='clear'
+alias mci='mvn clean install'
 
 PS1='[\u@\h \W]\$ '
