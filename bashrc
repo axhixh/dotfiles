@@ -25,6 +25,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias df='df -h'
 alias du='du -h -c'
+alias du1='du -h -c -d 1'
 alias mkdir='mkdir -p -v'
 alias c='clear'
 
