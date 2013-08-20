@@ -20,6 +20,10 @@ case $(uname -s) in
     NetBSD|OpenBSD) alias ls="ls -hF" ;;
 esac
 
+case $(uname -s) in
+    Darwin) alias gvim='open -a MacVim';;
+esac
+
 alias ll="ls -hl"
 alias ..='cd ..'
 alias ...='cd ../..'

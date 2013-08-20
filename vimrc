@@ -49,3 +49,4 @@ set smartindent
 set visualbell
 set ruler
 set showcmd
+set nowrap
