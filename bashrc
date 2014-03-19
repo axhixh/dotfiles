@@ -12,7 +12,8 @@ export HISTSIZE=5000
 export HISTFILESIZE=1000
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear"
-export PATH=$HOME/bin:$PATH
+export GOPATH=~/go 
+export PATH=$HOME/bin:$PATH:~/go/bin
 
 case $(uname -s) in
     Darwin|FreeBSD) alias ls="ls -hFG" ;;

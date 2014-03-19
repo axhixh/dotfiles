@@ -30,8 +30,8 @@ Bundle 'paredit.vim'
 filetype plugin indent on
 
 syntax enable
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
 
 set incsearch
 set ignorecase
