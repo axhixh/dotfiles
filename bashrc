@@ -12,8 +12,12 @@ export HISTSIZE=5000
 export HISTFILESIZE=1000
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear"
-export GOPATH=~/go 
+export MAVEN_OPTS="-Xmx2g -Xms256m"
+export GOPATH=/usr/lib/go/site:~/go 
 export PATH=$HOME/bin:$PATH:~/go/bin
+
+export DPA_SRC=$HOME/workspace/dpa/trunk
+export DPA_INSTALL=/opt/emc/dpa
 
 case $(uname -s) in
     Darwin|FreeBSD) alias ls="ls -hFG" ;;
