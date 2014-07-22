@@ -15,6 +15,8 @@ Bundle 'myusuf3/numbers.vim'
 Bundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 
+Bundle 'scrooloose/nerdtree'
+
 " rainbow parentheses
 Bundle 'kien/rainbow_parentheses.vim'
 
