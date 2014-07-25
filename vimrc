@@ -12,6 +12,9 @@ Bundle 'ShowTrailingWhitespace'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'myusuf3/numbers.vim'
 
+Bundle 'bling/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+
 " rainbow parentheses
 Bundle 'kien/rainbow_parentheses.vim'
 
@@ -23,7 +26,6 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " clojure
 Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-foreplay'
 Bundle 'tpope/vim-classpath'
 Bundle 'paredit.vim'
 
