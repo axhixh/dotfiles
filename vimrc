@@ -31,6 +31,9 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-classpath'
 Bundle 'paredit.vim'
 
+" go
+Plugin 'fatih/vim-go'
+
 filetype plugin indent on
 
 syntax enable
