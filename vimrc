@@ -54,3 +54,7 @@ set visualbell
 set ruler
 set showcmd
 set nowrap
+
+map j gj
+map k gk
+
