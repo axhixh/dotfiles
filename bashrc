@@ -13,7 +13,7 @@ export HISTFILESIZE=1000
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear"
 export MAVEN_OPTS="-Xmx2g -Xms256m"
-export GOPATH=/usr/lib/go/site:~/go 
+export GOPATH=~/go 
 export PATH=$HOME/bin:$PATH:~/go/bin
 
 export DPA_SRC=$HOME/workspace/dpa/trunk
@@ -38,6 +38,12 @@ alias du1='du -h -c -d 1'
 alias mkdir='mkdir -p -v'
 alias c='clear'
 alias mci='mvn clean install'
-alias cal='cal -3'
+case $(uname -s) in
+     Linux) alias cal='cal -3' ;;
+esac
+alias svn_incoming='svn log -r BASE:HEAD'
 
 PS1='[\u@\h \W]\$ '
+
+source ~/workspace/github/oh-my-git/prompt.sh
+

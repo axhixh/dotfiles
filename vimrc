@@ -20,6 +20,8 @@ Bundle 'scrooloose/nerdtree'
 " rainbow parentheses
 Bundle 'kien/rainbow_parentheses.vim'
 
+Plugin 'fatih/vim-go'
+
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
@@ -27,9 +29,9 @@ au Syntax * RainbowParenthesesLoadBraces
 
 
 " clojure
-Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-classpath'
-Bundle 'paredit.vim'
+"Bundle 'guns/vim-clojure-static'
+"Bundle 'tpope/vim-classpath'
+"Bundle 'paredit.vim'
 
 filetype plugin indent on
 
