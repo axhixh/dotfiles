@@ -35,5 +35,8 @@ alias mkdir='mkdir -p -v'
 alias c='clear'
 alias mci='mvn clean install'
 alias cal='cal -3'
+alias www='python -m http.server'
 
 PS1='[\u@\h \W]\$ '
+
+source ~/workspace/oh-my-git/prompt.sh
