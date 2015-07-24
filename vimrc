@@ -21,6 +21,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/rainbow_parentheses.vim'
 
 Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'majutsushi/tagbar'
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
