@@ -6,8 +6,13 @@
     pager = less -FXRS -x2
     editor = vim
 
-[http]
+[http "https://dpa-stash.lss.emc.com"]
 	sslverify = false
 
 [push]
 	default = simple
+[alias]
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	ls = log --decorate --oneline
+	ll = log --decorate --numstat
