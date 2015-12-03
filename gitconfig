@@ -15,3 +15,12 @@
 
 [push]
 	default = simple
+
+[http "https://dpa-stash.lss.emc.com"]
+    sslverify = false
+
+[alias]
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    ls = log --decorate --oneline
+    ll = log --decorate --numstat
