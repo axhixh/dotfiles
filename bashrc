@@ -12,6 +12,7 @@ export HISTSIZE=5000
 export HISTFILESIZE=1000
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear"
+export MAVEN_OPTS="-Xmx2g -Xms256m"
 export GOPATH=~/go 
 export PATH=$HOME/bin:$PATH:~/go/bin
 
@@ -34,6 +35,15 @@ alias du1='du -h -c -d 1'
 alias mkdir='mkdir -p -v'
 alias c='clear'
 alias mci='mvn clean install'
+case $(uname -s) in
+    Linux) alias cal='cal -3' ;;
+esac
+alias svn_incoming='svn log -r BASE:HEAD'
+
 alias cal='cal -3'
 
 PS1='[\u@\h \W]\$ '
+
+if [ -f ~/workspace/axhixh/oh-my-git/prompt.sh ]; then
+    source ~/workspace/axhixh/oh-my-git/prompt.sh
+fi
