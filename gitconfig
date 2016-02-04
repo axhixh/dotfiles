@@ -1,6 +1,5 @@
 [user]
 	name = Ashish Shrestha
-	email = axhixh@gmail.com
 
 [core]
 	excludesfile = ~/.gitignore_global
@@ -21,6 +20,14 @@
 
 [alias]
     unstage = reset HEAD --
+    uncommit = reset --soft HEAD^
     last = log -1 HEAD
     ls = log --decorate --oneline
     ll = log --decorate --numstat
+    set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
