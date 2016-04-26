@@ -13,8 +13,10 @@ export HISTFILESIZE=1000
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear"
 export MAVEN_OPTS="-Xmx2g -Xms256m"
-export GOPATH=~/go 
-export PATH=$HOME/bin:$PATH:~/go/bin
+export GOPATH=~/go
+export PATH=$HOME/bin:/usr/local/bin:$PATH:~/go/bin
+export HOMEBREW_NO_ANALYTICS=1
+#export DOCKER_HOST=`docker-machine ip default`
 
 case $(uname -s) in
     Darwin|FreeBSD) alias ls="ls -hFG" ;;
@@ -40,10 +42,12 @@ case $(uname -s) in
 esac
 alias svn_incoming='svn log -r BASE:HEAD'
 
-alias cal='cal -3'
-
 PS1='[\u@\h \W]\$ '
 
 if [ -f ~/workspace/axhixh/oh-my-git/prompt.sh ]; then
     source ~/workspace/axhixh/oh-my-git/prompt.sh
 fi
+
+# OPAM configuration
+. /Users/shresa/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
