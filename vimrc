@@ -27,12 +27,14 @@ au Syntax * RainbowParenthesesLoadBraces
 
 
 " clojure
-Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-classpath'
-Bundle 'paredit.vim'
+"Bundle 'guns/vim-clojure-static'
+"Bundle 'tpope/vim-classpath'
+"Bundle 'paredit.vim'
 
 " go
 Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'majutsushi/tagbar'
 
 filetype plugin indent on
 
