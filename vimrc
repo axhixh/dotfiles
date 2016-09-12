@@ -36,6 +36,10 @@ Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 
+" ocaml
+let g:opamshare = substitute(system('opam config var share'), '\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
 filetype plugin indent on
 
 syntax enable
