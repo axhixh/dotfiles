@@ -34,6 +34,8 @@ alias du1='du -h -c -d 1'
 alias mkdir='mkdir -p -v'
 alias c='clear'
 alias mci='mvn clean install'
-alias cal='cal -3'
+case $(uname -s) in
+    Linux) alias cal='cal -3';;
+esac
 
 PS1='[\u@\h \W]\$ '
