@@ -38,7 +38,7 @@ alias mkdir='mkdir -p -v'
 alias c='clear'
 alias mci='mvn clean install'
 case $(uname -s) in
-    Linux) alias cal='cal -3' ;;
+    Linux) alias cal='cal -3';;
 esac
 alias svn_incoming='svn log -r BASE:HEAD'
 
