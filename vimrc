@@ -61,3 +61,6 @@ set nowrap
 map j gj
 map k gk
 
+inoremap jk <ESC>
+
+
