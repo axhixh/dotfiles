@@ -63,6 +63,7 @@ set visualbell
 set ruler
 set showcmd
 set nowrap
+set backupskip=/tmp/*,/private/tmp/*
 
 map j gj
 map k gk
