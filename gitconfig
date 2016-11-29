@@ -23,6 +23,7 @@
     uncommit = reset --soft HEAD^
     last = log -1 HEAD
     ls = log --decorate --oneline
+    lg = log --graph --oneline
     ll = log --decorate --numstat
     set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 
