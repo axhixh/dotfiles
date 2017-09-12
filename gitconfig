@@ -26,6 +26,9 @@
     lg = log --graph --decorate --oneline
     ll = log --decorate --numstat
     set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+    refs = for-each-ref --sort=-committerdate --format='%(color:red bold)%(refname:short)%(color:reset) %(color:yellow)%(committerdate:relative)%(color:reset) %(color:magenta bold)%(authorname)%(color:reset) %(color:green)%(objectname:short)%(color:reset) %(contents:subject)'
+    lbs = !git refs refs/heads
+    rbs = !git refs refs/remotes
 
 [merge]
 	tool = vimdiff
