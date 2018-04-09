@@ -1,24 +1,22 @@
-" start off with clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+" see https://github.com/junegunn/vim-plugin
 
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+call plug#begin('~/.vim/bundle')
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'ShowTrailingWhitespace'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'myusuf3/numbers.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
-Bundle 'bling/vim-airline'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'vim-scripts/ShowTrailingWhitespace'
+Plug 'myusuf3/numbers.vim'
+
+Plug 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 
-Bundle 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
+Plug 'ctrlpvim/ctrlp.vim'
 
 " rainbow parentheses
-Bundle 'kien/rainbow_parentheses.vim'
+Plug 'kien/rainbow_parentheses.vim'
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -26,25 +24,25 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 
-" clojure
-"Bundle 'guns/vim-clojure-static'
-"Bundle 'tpope/vim-classpath'
-"Bundle 'paredit.vim'
-
 " go
-Plugin 'fatih/vim-go'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'majutsushi/tagbar'
+Plug 'fatih/vim-go'
+let g:go_highlight_fields = 1
+let g:go_metalinter_neabled = ['vet', 'golint', 'errcheck']
+" Plug 'Valloric/YouCompleteMe'
+Plug 'nsf/gocode', {'rtp':'vim', 'do': '~/.vim/bundle/gocode/vim/symlink.sh'}
+Plug 'majutsushi/tagbar'
+
+Plug 'ajmwagar/vim-deus'
+call plug#end()
 
 " ocaml
 let g:opamshare = substitute(system('opam config var share'), '\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 execute "set rtp+=" . g:opamshare . "/ocp-indent/vim"
-filetype plugin indent on
 
-syntax enable
-"set background=dark
-"colorscheme solarized
+
+set background=dark
+colorscheme deus
 
 set incsearch
 set ignorecase
@@ -59,15 +57,19 @@ set expandtab
 set autoindent
 set smartindent
 
+set autowrite
+
 set visualbell
 set ruler
+set wildmenu
+set laststatus=2
 set showcmd
 set nowrap
 set backupskip=/tmp/*,/private/tmp/*
+set backspace=indent,eol,start
 
 map j gj
 map k gk
 
 inoremap jk <ESC>
-
 
