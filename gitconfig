@@ -15,12 +15,11 @@
 [push]
 	default = simple
 
-[http "https://dpa-stash.lss.emc.com"]
-    sslverify = false
-
 [alias]
     unstage = reset HEAD --
     uncommit = reset --soft HEAD^
+    h = log -n 1 --pretty=format:%H
+    sh = log  -n 1 --pretty=format:%h
     last = log -1 HEAD
     ls = log --decorate --oneline
     lg = log --graph --decorate --oneline

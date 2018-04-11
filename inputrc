@@ -1,9 +1,4 @@
 set editing-mode vi
-# additinally use jj for esc
-#"jj": vi-movement-mode
-# beginning and end of history
-#"gg": beginning-of-history
-#"G": end-of-history
 # no visible or audible alerts
 set bell-style none
 # just show the options if more than one

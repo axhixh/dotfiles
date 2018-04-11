@@ -16,7 +16,7 @@ export MAVEN_OPTS="-Xmx2g -Xms256m"
 export GOPATH=~/go
 export PATH=$HOME/bin:/usr/local/bin:$PATH:~/go/bin
 export HOMEBREW_NO_ANALYTICS=1
-#export DOCKER_HOST=`docker-machine ip default`
+export CDPATH=.:~:~/go/src/github.com/solo-io:~/go/src/github.com/axhixh:~/work:~/go/src/github.com
 
 case $(uname -s) in
     Darwin|FreeBSD) alias ls="ls -hFG" ;;
@@ -37,6 +37,10 @@ alias du1='du -h -c -d 1'
 alias mkdir='mkdir -p -v'
 alias c='clear'
 alias mci='mvn clean install'
+alias k='kubectl'
+alias kg='kubectl -n gloo-system'
+
+alias dci="docker images | grep none | awk '{print $3}' | xargs docker rmi"
 case $(uname -s) in
     Linux) alias cal='cal -3';;
 esac
@@ -48,6 +52,11 @@ if [ -f ~/workspace/axhixh/oh-my-git/prompt.sh ]; then
     source ~/workspace/axhixh/oh-my-git/prompt.sh
 fi
 
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+    __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
 # OPAM configuration
-. /Users/shresa/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+. /Users/ashish/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
