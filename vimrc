@@ -23,14 +23,26 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-
 " go
 Plug 'fatih/vim-go'
 let g:go_highlight_fields = 1
+let g:go_fmt_command = "goimports"
 let g:go_metalinter_neabled = ['vet', 'golint', 'errcheck']
-" Plug 'Valloric/YouCompleteMe'
 Plug 'nsf/gocode', {'rtp':'vim', 'do': '~/.vim/bundle/gocode/vim/symlink.sh'}
 Plug 'majutsushi/tagbar'
+
+" auto complete
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py --go-completer
+  endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 Plug 'ajmwagar/vim-deus'
 call plug#end()
