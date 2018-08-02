@@ -16,7 +16,7 @@ export MAVEN_OPTS="-Xmx2g -Xms256m"
 export GOPATH=~/go
 export PATH=$HOME/bin:/usr/local/bin:$PATH:~/go/bin
 export HOMEBREW_NO_ANALYTICS=1
-export CDPATH=.:~:~/go/src/github.com/solo-io:~/go/src/github.com/axhixh:~/work:~/go/src/github.com
+export CDPATH=.:~:~/go/src/github.com/axhixh:~/work:~/Projects:~/go/src/github.com
 
 case $(uname -s) in
     Darwin|FreeBSD) alias ls="ls -hFG" ;;
@@ -38,7 +38,6 @@ alias mkdir='mkdir -p -v'
 alias c='clear'
 alias mci='mvn clean install'
 alias k='kubectl'
-alias kg='kubectl -n gloo-system'
 
 alias dci="docker images | grep none | awk '{print $3}' | xargs docker rmi"
 case $(uname -s) in
