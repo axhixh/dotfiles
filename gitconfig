@@ -14,7 +14,7 @@
     ui = true
 
 [push]
-	default = simple
+	default = current
 
 [alias]
     unstage = reset HEAD --
