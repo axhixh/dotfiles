@@ -8,16 +8,16 @@
 # shell variables
 export PAGER=less
 export EDITOR=nvim
+export VISUAL=nvim
 export HISTSIZE=5000
 export HISTFILESIZE=1000
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear"
 export MAVEN_OPTS="-Xmx2g -Xms256m"
 export GOPATH=~/go
-export GRAALVM_HOME=~/graalvm-ce-1.0.0-rc7/Contents/Home
 export PATH=$HOME/bin:/usr/local/bin:$PATH:~/go/bin:$GRAALVM_HOME/bin
 export HOMEBREW_NO_ANALYTICS=1
-export CDPATH=.:~:~/go/src/github.com/axhixh:~/work:~/Projects:~/go/src/github.com:~/Documentsc
+export CDPATH=.:~:~/go/src/github.com/axhixh:~/work:~/Projects:~/go/src/github.com:~/Documents
 
 case $(uname -s) in
     Darwin|FreeBSD) alias ls="ls -hFG" ;;
@@ -30,7 +30,8 @@ esac
 
 alias vim=nvim
 alias diff="diff-so-fancy"
-alias ll="ls -hl"
+alias ls="exa"
+alias ll="exa -hl"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias df='df -h'
@@ -45,6 +46,9 @@ alias dci="docker images | grep none | awk '{print $3}' | xargs docker rmi"
 case $(uname -s) in
     Linux) alias cal='cal -3';;
 esac
+
+# multiple Go versions
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # OPAM configuration
 . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

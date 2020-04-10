@@ -1,9 +1,9 @@
 call plug#begin('~/.local/share/nvim/plugged')
+" Let's start with some sensible defaults
+Plug 'jeffkreeftmeijer/neovim-sensible'
 
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-
-Plug 'myusuf3/numbers.vim'
 
 Plug 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -19,6 +19,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 set hidden
 let g:LanguageClient_serverCommands = {
   \ 'ruby':['~/.rvm/gems/ruby-2.3.8/bin/solargraph', 'stdio'],
+  \ 'ocaml': ['ocamllsp'],
   \ }
 
 Plug 'cloudhead/neovim-fuzzy'
@@ -35,6 +36,13 @@ au Syntax * RainbowParenthesesLoadBraces
 " Plug 'ajmwagar/vim-deus'
 Plug 'rakr/vim-one'
 
+"programming languages
+"Plug 'rust-lang/rust.vim'
+
+" OCaml
+let g:opamshare = substitute(system('opam config var share'), '\n$', '', '''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
 call plug#end()
 
 " set background=dark
@@ -50,9 +58,7 @@ set smartcase
 set hlsearch
 
 set smarttab
-set shiftwidth=4
 set tabstop=4
-set expandtab
 
 set autoindent
 set smartindent
