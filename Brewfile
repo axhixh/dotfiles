@@ -1,0 +1,22 @@
+tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
+
+brew 'coreutils'
+brew 'exa'
+brew 'fselect'
+brew 'fzy'
+brew 'git'
+brew 'neovim'
+brew 'ripgrep'
+brew 'tig'
+
+# Cask
+cask 'dropbox'
+cask 'font-fira-code'
+cask 'font-victor-mono'
+cask 'grandperspective'
+cask 'iina'
+cask 'insomnia'
+cask 'kindlegen'
+cask 'the-unarchiver'
