@@ -6,3 +6,4 @@ Collection of dotfiles.
    Inside vim run :PlugInstall or :PlugUpgrade
 3. Checkout oh-my-git
    [git clone https://github.com/arialdomartini/oh-my-git.git ~/workshop/axhixh/oh-my-git]
+4. Configure fish shell by running `ln -s ~/Projects/dotfines/config/fish ~/.config`
