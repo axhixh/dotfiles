@@ -11,7 +11,7 @@
 # OPAM configuration
 . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
-[[ -s "$HOME/.environment" ]] && source "$HOME/.environment
+[[ -s "$HOME/.environment" ]] && source "$HOME/.environment"
 [[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
 # prompt
