@@ -33,8 +33,8 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-" Plug 'ajmwagar/vim-deus'
-Plug 'rakr/vim-one'
+Plug 'ajmwagar/vim-deus'
+"Plug 'rakr/vim-one'
 
 "programming languages
 "Plug 'rust-lang/rust.vim'
@@ -45,12 +45,12 @@ execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 call plug#end()
 
-" set background=dark
-" colorscheme deus
+set background=dark
+colorscheme deus
 
-colorscheme one
-set background=light
-let g:airline_theme='one'
+"colorscheme one
+"set background=dark
+"let g:airline_theme='one'
 
 set incsearch
 set ignorecase
