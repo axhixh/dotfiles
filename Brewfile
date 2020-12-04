@@ -2,6 +2,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 
+brew 'bat'
 brew 'coreutils'
 brew 'ctop'
 brew 'exa'
@@ -14,6 +15,7 @@ brew 'opam'
 brew 'openjdk'
 brew 'ripgrep'
 brew 'tig'
+brew 'zola'
 
 # Cask
 cask 'dropbox'
