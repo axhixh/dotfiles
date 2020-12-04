@@ -19,6 +19,7 @@ brew 'zola'
 
 # Cask
 cask 'dropbox'
+cask 'font-fantasque-sans-mono'
 cask 'font-fira-code'
 cask 'font-victor-mono'
 cask 'grandperspective'
