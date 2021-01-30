@@ -6,3 +6,6 @@ if test -e ~/.aliases
   source ~/.aliases
 end
 
+if test -e ~/.environment
+  source ~/.environment
+end

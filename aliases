@@ -14,4 +14,4 @@ alias g='./gradlew build'
 alias k='kubectl'
 alias incoming='tig ..origin/master'
 alias dci="docker images | grep none | awk '{print $3}' | xargs docker rmi"
-alias gbd='git branch -D $(git branch | fzy)'
+#alias gbd='git branch -D $(git branch | fzy)'
