@@ -22,8 +22,9 @@ let g:LanguageClient_serverCommands = {
   \ 'ocaml': ['ocamllsp'],
   \ }
 
-Plug 'cloudhead/neovim-fuzzy'
-nnoremap <C-p> :FuzzyOpen<CR>
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+nnoremap <C-p> :Files
 
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
