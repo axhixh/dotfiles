@@ -1,4 +1,5 @@
 Collection of dotfiles.
+0. You can install necessary apps by running `brew bundle`
 1. Need to manually do ln -s dotfiles/file ~/.file
 2. For Vim remember to install  vim-plugin [https://github.com/junegunn/vim-plug]
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -6,4 +7,4 @@ Collection of dotfiles.
    Inside vim run :PlugInstall or :PlugUpgrade
 3. Checkout oh-my-git
    [git clone https://github.com/arialdomartini/oh-my-git.git ~/workshop/axhixh/oh-my-git]
-4. Configure fish shell by running `ln -s ~/Projects/dotfines/config/fish ~/.config`
+4. Configure fish shell by running `ln -s ~/Projects/dotfiles/config/fish ~/.config`
