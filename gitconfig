@@ -1,6 +1,6 @@
 [user]
 	name = Ashish Shrestha
-	email = 
+    useConfigOnly = true
 
 [core]
 	excludesfile = /Users/ashrestha/.gitignore_global
