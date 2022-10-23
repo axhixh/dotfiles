@@ -4,8 +4,8 @@
 
 [core]
 	excludesfile = /Users/ashrestha/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
-    editor = nvim
+	pager = delta
+	editor = hx
 
 [web]
     browser = firefox
@@ -13,6 +13,13 @@
 [color]
     ui = true
 
+[delta]
+	navigate = true
+	light = false
+
+[interactive]
+	diffFilter = delta --color-only
+ 
 [push]
 	default = current
 
@@ -33,10 +40,7 @@
     st = status --short --branch
 
 [merge]
-	tool = vimdiff
 	conflictstyle = diff3
-[mergetool]
-	prompt = false
 
 [apply]
     whitespace = fix
