@@ -4,8 +4,9 @@ if not status_ok then
 end
 
 treesitter.setup {
-    ensure_installed = "maintained",
+    ensure_installed = { "c", "lua", "kotlin", "ruby", "zig" },
     sync_install = false,
+    auto_install = true,
     rainbow = {
         enable = true,
         extended_mode = true,
