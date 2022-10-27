@@ -14,3 +14,5 @@ end
 fish_vi_key_bindings
 set -e fish_greeting # remove default greeting
 
+# opam configuration
+source /Users/ashrestha/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
