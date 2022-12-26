@@ -2,6 +2,7 @@ alias vi=nvim
 alias vim=nvim
 alias ls="exa"
 alias ll="exa -hl"
+alias lr="exa -hl -s changed"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias df='df -h'
