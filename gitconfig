@@ -1,11 +1,11 @@
 [user]
-	name = Ashish Shrestha
+    name = Ashish Shrestha
     useConfigOnly = true
 
 [core]
-	excludesfile = /Users/ashrestha/.gitignore_global
-	pager = delta
-	editor = hx
+    excludesfile = /Users/ashrestha/.gitignore_global
+    pager = delta
+    editor = hx
 
 [web]
     browser = firefox
@@ -14,14 +14,14 @@
     ui = true
 
 [delta]
-	navigate = true
-	light = false
+    navigate = true
+    light = false
 
 [interactive]
-	diffFilter = delta --color-only
+    diffFilter = delta --color-only
  
 [push]
-	default = current
+    default = current
 
 [alias]
     unstage = reset HEAD --
@@ -40,7 +40,11 @@
     st = status --short --branch
 
 [merge]
+	tool = vimdiff
 	conflictstyle = diff3
+[mergetool]
+	prompt = false
+    conflictstyle = diff3
 
 [apply]
     whitespace = fix
