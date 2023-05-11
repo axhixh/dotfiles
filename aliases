@@ -1,7 +1,8 @@
-alias vi=nvim
-alias vim=nvim
+alias vi=hx
+alias vim=hx
 alias ls="exa"
-alias ll="exa -hl --git"
+alias lg="exa -hl --git"
+alias ll="exa -hl"
 alias lr="exa -hl --git -s changed"
 alias tree="exa -h --tree"
 alias ..='cd ..'
