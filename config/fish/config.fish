@@ -16,3 +16,5 @@ set -e fish_greeting # remove default greeting
 
 # opam configuration
 source /Users/ashrestha/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+source /opt/homebrew/opt/asdf/libexec/asdf.fish

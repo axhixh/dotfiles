@@ -1,12 +1,12 @@
 # shell variables
 set -x PAGER less
-set -x EDITOR nvim
-set -x VISUAL nvim
+set -x EDITOR hx
+set -x VISUAL hx
 set -x HISTSIZE 5000
 set -x HISTFILESIZE 1000
 set -x HISTCONTROL ignoredups
 set -x HISTIGNORE "&:ls:ll:la:l.:pwd:exit:clear"
 set -x GOPATH $HOME/go
-set -x PATH $HOME/bin /usr/local/opt/openjdk@11/bin $PATH $HOME/go/bin
+set -x PATH $HOME/bin /opt/homebrew/bin /usr/local/opt/openjdk@11/bin $PATH $HOME/go/bin
 set -x HOMEBREW_NO_ANALYTICS 1
-set -x CDPATH .:$HOME:$HOME/go/src/github.com/axhixh:$HOME/Projects:$HOME/Documents
+set -x CDPATH .:..:$HOME:$HOME/go/src/github.com/axhixh:$HOME/Projects:$HOME/Documents
