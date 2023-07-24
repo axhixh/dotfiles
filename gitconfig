@@ -48,3 +48,5 @@
 
 [apply]
     whitespace = fix
+[diff]
+	external = difft
