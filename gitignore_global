@@ -1,4 +1,18 @@
-*~
+# OS files
 .DS_Store
-target
+Thumbs.db
+
+# editors
+*~
+.#*
+.*.sw[a-z]
+
+# build
 build-impl.xml
+target
+*.log
+hs_err_pid*
+
+# Folders
+.idea
+.vscode
