@@ -13,10 +13,6 @@
 [color]
     ui = true
 
-[delta]
-    navigate = true
-    light = false
-
 [interactive]
     diffFilter = delta --color-only
  
