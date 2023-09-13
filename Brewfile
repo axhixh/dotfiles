@@ -17,6 +17,7 @@ brew 'git'
 brew 'helix'
 brew 'iredis'
 brew 'ripgrep'
+brew 'stow'
 brew 'tig'
 brew 'xh'
 
