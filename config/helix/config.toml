@@ -1,3 +1,5 @@
+theme = "monokai_pro_octagon"
+
 [editor]
 line-number = "relative"
 
@@ -9,3 +11,6 @@ newline = "none"
 [editor.whitespace.characters]
 tab = "→"
 tabpad = "·"
+
+[editor.lsp]
+display-messages = true
