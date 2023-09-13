@@ -1,0 +1,6 @@
+[[language]]
+name = "sml"
+auto-format = false
+file-types = ["sml", "ml", "sig"]
+language-server = { command = "millet-ls"}
+formatter = { command = "smlfmt" }
