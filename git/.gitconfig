@@ -4,7 +4,6 @@
 
 [core]
     excludesfile = /Users/ashrestha/.gitignore_global
-    pager = delta
     editor = hx
 
 [web]
