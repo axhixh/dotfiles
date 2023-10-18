@@ -1,7 +1,9 @@
 theme = "monokai_pro_octagon"
 
 [editor]
+bufferline = "multiple"
 line-number = "relative"
+rulers = [120]
 
 [editor.whitespace.render]
 space = "none"
