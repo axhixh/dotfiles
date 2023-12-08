@@ -1,0 +1,163 @@
+# Place a copy of this config to ~/.aerospace.toml. After that, you can edit ~/.aerospace.toml to your liking
+# Feel free to omit keys that you don't use in your config. If the key is absent in your config the default value is taken from this config
+
+# You can use it to add commands that run after login to macOS user session.
+# 'start-at-login' needs to be 'true' for 'after-login-command' to work
+# For the list of available commands see: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md
+after-login-command = []
+
+# You can use it to add commands that run after AeroSpace startup.
+# 'after-startup-command' is run after 'after-login-command'
+# For the list of available commands see: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md
+after-startup-command = []
+
+# Start AeroSpace at login
+start-at-login = false
+
+# Normalizations. See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/guide.md#normalization
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/guide.md#layouts
+# The 'accordion-padding' specifies the size of the padding. You can set 0 to disable the padding feature
+accordion-padding = 30
+
+# Possible values: tiles|accordion
+default-root-container-layout = 'tiles'
+
+# Possible values: horizontal|vertical|auto
+# 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
+#               tall monitor (anything higher than wide) gets vertical orientation
+default-root-container-orientation = 'auto'
+
+# Available since: 0.6.0-Beta
+gaps.inner.horizontal = 0
+gaps.inner.vertical =   0
+gaps.outer.left =       0
+gaps.outer.bottom =     0
+gaps.outer.top =        0
+gaps.outer.right =      0
+
+# Visual indent makes it easier to understand that containers of the same orientation are nested.
+# If you have 'enable-normalization-opposite-orientation-for-nested-containers' enabled then there is no way to
+# observe the indent
+indent-for-nested-containers-with-the-same-orientation = 30
+
+# Layout of root containers of non-empty workspaces. The layout is applied only on startup
+# Possible values: smart|tiles|accordion
+# - 'tiles' and 'accordion' are self-describing
+# - 'smart' means some "smart logic". Currently, 3 and less windows will get 'tiles' layout,
+#   4 and more will get 'accordion' layout. 'smart' can change its behavior in future versions
+non-empty-workspaces-root-containers-layout-on-startup = 'smart'
+
+# 'main' binding mode declaration. See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/guide.md#bindings-modes
+# 'main' binding mode must be always presented
+[mode.main.binding]
+
+# All possible keys:
+# - Letters.       a, b, c, ..., z
+# - Numbers.       0, 1, 2, ..., 9
+# - F-keys.        f1, f2, ..., f20
+# - Special keys.  minus, equal, period, comma, slash, backslash, quote, semicolon, backtick, leftSquareBracket, rightSquareBracket, space, enter, esc, backspace, tab
+# - Arrows.        left, down, up, right
+
+# All possible modifiers: cmd, alt, ctrl, shift
+
+# For all possible commands see: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md
+
+# You can uncomment this line to open up terminal with alt + enter shortcut
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#exec-and-forget
+# alt-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
+
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#layout
+alt-ctrl-slash = 'layout tiles horizontal vertical'
+alt-ctrl-comma = 'layout accordion horizontal vertical'
+
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#focus
+alt-left = 'focus left'
+alt-down = 'focus down'
+alt-up = 'focus up'
+alt-right = 'focus right'
+
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#move-through
+alt-ctrl-left = 'move-through left'
+alt-ctrl-down = 'move-through down'
+alt-ctrl-up = 'move-through up'
+alt-ctrl-right = 'move-through right'
+
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#resize
+alt-shift-minus = 'resize smart -50'
+alt-shift-equal = 'resize smart +50'
+
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#workspace
+alt-ctrl-0 = 'workspace 0'
+alt-ctrl-1 = 'workspace 1'
+alt-ctrl-2 = 'workspace 2'
+alt-ctrl-3 = 'workspace 3'
+alt-ctrl-4 = 'workspace 4'
+alt-ctrl-5 = 'workspace 5'
+alt-ctrl-6 = 'workspace 6'
+alt-ctrl-7 = 'workspace 7'
+
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#move-node-to-workspace
+alt-shift-ctrl-0 = 'move-node-to-workspace 0'
+alt-shift-ctrl-1 = 'move-node-to-workspace 1'
+alt-shift-ctrl-2 = 'move-node-to-workspace 2'
+alt-shift-ctrl-3 = 'move-node-to-workspace 3'
+alt-shift-ctrl-4 = 'move-node-to-workspace 4'
+alt-shift-ctrl-5 = 'move-node-to-workspace 5'
+alt-shift-ctrl-6 = 'move-node-to-workspace 6'
+alt-shift-ctrl-7 = 'move-node-to-workspace 7'
+
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#workspace-back-and-forth
+alt-tab = 'workspace-back-and-forth'
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#move-workspace-to-monitor
+alt-shift-tab = 'move-workspace-to-monitor next'
+
+# See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#mode
+alt-shift-semicolon = 'mode service'
+alt-shift-slash = 'mode join'
+
+# 'service' binding mode declaration. See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/guide.md#bindings-modes
+[mode.service.binding]
+r = ['flatten-workspace-tree', 'mode main'] # reset layout
+#s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
+f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+backspace = ['close-all-windows-but-current', 'mode main']
+esc = 'mode main'
+
+# 'join' binding mode declaration. See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/guide.md#bindings-modes
+[mode.join.binding]
+alt-left = ['join-with left', 'mode main']
+alt-down = ['join-with down', 'mode main']
+alt-up = ['join-with up', 'mode main']
+alt-right = ['join-with right', 'mode main']
+esc = ['reload-config', 'mode main']
+
+[workspace-to-monitor-force-assignment]
+0 = 'main'
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = 'secondary'
+5 = 'secondary'
+6 = 'secondary'
+7 = 'secondary'
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.intellij'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['move-node-to-workspace 4']
