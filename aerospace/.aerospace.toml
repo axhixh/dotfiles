@@ -112,7 +112,7 @@ alt-shift-ctrl-7 = 'move-node-to-workspace 7'
 # See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
 # See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#move-workspace-to-monitor
-alt-shift-tab = 'move-workspace-to-monitor next'
+alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/commands.md#mode
 alt-shift-semicolon = 'mode service'
