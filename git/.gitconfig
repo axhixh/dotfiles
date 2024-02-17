@@ -3,7 +3,7 @@
     useConfigOnly = true
 
 [core]
-    excludesfile = /Users/ashrestha/.gitignore_global
+    excludesfile = ~/.gitignore_global
     editor = hx
 
 [web]
@@ -11,6 +11,12 @@
 
 [color]
     ui = true
+
+[diff]
+    algorithm = histogram
+
+[init]
+    defaultBranch = main
 
 [interactive]
     diffFilter = delta --color-only
@@ -36,10 +42,11 @@
 
 [merge]
 	tool = vimdiff
-	conflictstyle = diff3
+	conflictstyle = zdiff3
+	
 [mergetool]
 	prompt = false
-    conflictstyle = diff3
+    conflictstyle = zdiff3
 
 [apply]
     whitespace = fix
