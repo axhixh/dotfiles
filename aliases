@@ -1,7 +1,7 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias c='clear'
-alias cat='bat --theme Nord'
+alias cat='bat --theme ansi'
 alias dci="docker images | grep none | awk '{print $3}' | xargs docker rmi"
 alias df='df -h'
 alias du='du -h -c'
