@@ -20,6 +20,7 @@ brew 'neovide'
 brew 'ripgrep'
 brew 'stow'
 brew 'tig'
+brew 'typst'
 brew 'xh'
 
 # Cask
