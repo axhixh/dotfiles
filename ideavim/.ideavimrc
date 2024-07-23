@@ -2,7 +2,7 @@ set number relativenumber
 set idearefactormode=keep
 set ideajoin
 
-" let mapleader = " "
+let mapleader = " "
 
 "noremap <Esc> <nop>
 "nmap <S-Enter> O<Esc>
