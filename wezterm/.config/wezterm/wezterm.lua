@@ -1,9 +1,4 @@
 local wezterm = require 'wezterm'
-local config = {}
-
-if wezterm.config_builder then
-  config = wezterm.config_builder()
-end
 
 local function segments_for_right_status(window)
   return {
@@ -49,13 +44,48 @@ wezterm.on('update-status', function(window, _)
   window:set_right_status(wezterm.format(elements))
 end)
 
-config.font_size = 16.0
--- config.font = wezterm.font('VictorMono Nerd Font Mono',
---  { weight = 'Thin' })
-config.font = wezterm.font('CommitMonoaxhixh')
+local config = {}
+if wezterm.config_builder then
+  config = wezterm.config_builder()
+end
+
+-- panes
+local act = wezterm.action
+
+config.keys = {
+  {
+    key = "PageUp", mods = 'ALT|CTRL',
+    action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+{
+    key = "PageDown", mods = 'ALT|CTRL',
+    action = act.SplitVertical { domain = 'CurrentPaneDomain' },
+  }, 
+  {
+    key = "UpArrow", mods = "ALT",
+    action = act.ActivatePaneDirection('Up')
+  },
+  {
+    key = "DownArrow", mods = "ALT",
+    action = act.ActivatePaneDirection('Down')
+  },
+  {
+    key = "LeftArrow", mods = "ALT",
+    action = act.ActivatePaneDirection('Left')
+  },
+  {
+    key = "RightArrow", mods = "ALT",
+    action = act.ActivatePaneDirection('Right')
+  },
+}
+
+config.font_size = 14.0
+config.font = wezterm.font('Martian Mono Cn xLt')
 
 config.color_scheme = 'Atelierheath (light) (terminal.sexy)'
 
 config.window_decorations = 'INTEGRATED_BUTTONS'
 
 return config
+
+-- https://alexplescan.com/posts/2024/08/10/wezterm/
