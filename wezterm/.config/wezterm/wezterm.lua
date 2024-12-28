@@ -12,13 +12,12 @@ wezterm.on('update-status', function(window, _)
   local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
   local segments = segments_for_right_status(window)
 
-  local color_scheme = window:effective_config().resolved_palette
   -- parsing to convert to Color object so we can lighten/darken
   local bg = wezterm.color.parse("purple")
   local fg = wezterm.color.parse("white")
   -- each segment is darker/lighter
-  local gradient_to, gradient_from = bg
-  gradient_from = gradient_to:darken(0.3)
+  local gradient_to = bg
+  local gradient_from = gradient_to:darken(0.3)
   local gradient = wezterm.color.gradient(
     {
       orientation = 'Horizontal',
@@ -79,11 +78,25 @@ config.keys = {
   },
 }
 
-config.font_size = 14.0
+local function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+  return 'Light'
+end
+
+local function scheme_for_appearance(appearance)
+  if appearance:find 'Dark' then
+    return 'nord'
+  else
+    return 'nord-light'
+  end
+end
+
+config.font_size = 16.0
 config.font = wezterm.font('Martian Mono Cn xLt')
-
-config.color_scheme = 'Atelierheath (light) (terminal.sexy)'
-
+-- config.font = wezterm.font('Uiua386Color')
+config.color_scheme = scheme_for_appearance(get_appearance())
 config.window_decorations = 'INTEGRATED_BUTTONS'
 
 return config
