@@ -87,9 +87,9 @@ end
 
 local function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'nord'
+    return 'Tokyo Night'
   else
-    return 'nord-light'
+    return 'Tokyo Night Light (Gogh)'
   end
 end
 
