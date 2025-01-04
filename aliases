@@ -19,4 +19,4 @@ alias ls="eza"
 alias mkdir='mkdir -p -v'
 alias tree="eza -h --tree"
 alias vi=hx
-alias vim=hx
+alias vim=nvim
