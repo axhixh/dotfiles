@@ -8,7 +8,7 @@ return {
       -- super-tab: similarto vscode, tab = accept, arrows = navigate
       -- enter: similar to super-tab, enter = accept
       -- see 'keymap' to create your own
-      keymap = { preset = 'enter', },
+      keymap = { preset = 'super-tab', },
       appearance = {
         use_nvim_cmp_as_default = true, -- fallback, will be removed in future
         nerd_font_variant = 'mono'
