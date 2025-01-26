@@ -101,8 +101,8 @@ alt-ctrl-up = 'move up'
 alt-ctrl-right = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-ctrl-minus = 'resize smart -50'
-alt-ctrl-equal = 'resize smart +50'
+alt-shift-down = 'resize smart -50'
+alt-shift-up = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1'
