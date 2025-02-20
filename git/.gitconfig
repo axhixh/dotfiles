@@ -42,11 +42,9 @@
 
 [merge]
 	tool = vimdiff
-	conflictstyle = zdiff3
 	
 [mergetool]
 	prompt = false
-    conflictstyle = zdiff3
 
 [apply]
     whitespace = fix
@@ -54,3 +52,5 @@
 	external = difft
 [init]
 	defaultBranch = main
+[gitbutler]
+	aiModelProvider = ollama
