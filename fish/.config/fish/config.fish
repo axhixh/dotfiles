@@ -17,6 +17,14 @@ set -e fish_greeting # remove default greeting
 # opam configuration
 source /Users/ashrestha/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
-if test -e /opt/homebrew/opt/asdf/libexec/asdf.fish
-  source /opt/homebrew/opt/asdf/libexec/asdf.fish
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end    
+
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
 end
+
+set --erase _asdf_shims
