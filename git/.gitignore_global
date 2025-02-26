@@ -16,3 +16,4 @@ hs_err_pid*
 # Folders
 .idea
 .vscode
+.jj
