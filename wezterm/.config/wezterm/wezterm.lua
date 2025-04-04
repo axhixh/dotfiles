@@ -24,7 +24,7 @@ wezterm.on('update-status', function(window, _)
       colors = { gradient_from, gradient_to },
     },
     -- number os colors == number of segments
-    #segments 
+    #segments
   )
 
   local elements = {}
@@ -53,27 +53,33 @@ local act = wezterm.action
 
 config.keys = {
   {
-    key = "PageUp", mods = 'ALT|CTRL',
+    key = "PageUp",
+    mods = 'ALT|CTRL',
     action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
-{
-    key = "PageDown", mods = 'ALT|CTRL',
-    action = act.SplitVertical { domain = 'CurrentPaneDomain' },
-  }, 
   {
-    key = "UpArrow", mods = "ALT",
+    key = "PageDown",
+    mods = 'ALT|CTRL',
+    action = act.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = "UpArrow",
+    mods = "ALT",
     action = act.ActivatePaneDirection('Up')
   },
   {
-    key = "DownArrow", mods = "ALT",
+    key = "DownArrow",
+    mods = "ALT",
     action = act.ActivatePaneDirection('Down')
   },
   {
-    key = "LeftArrow", mods = "ALT",
+    key = "LeftArrow",
+    mods = "ALT",
     action = act.ActivatePaneDirection('Left')
   },
   {
-    key = "RightArrow", mods = "ALT",
+    key = "RightArrow",
+    mods = "ALT",
     action = act.ActivatePaneDirection('Right')
   },
 }
@@ -94,9 +100,8 @@ local function scheme_for_appearance(appearance)
 end
 
 config.font_size = 16.0
-config.font = wezterm.font('VictorMono Nerd Font Propo')
 --config.font = wezterm.font('Martian Mono Cn xLt')
---config.font = wezterm.font('Uiua386Color')
+config.font = wezterm.font('Iosevka Term')
 config.color_scheme = scheme_for_appearance(get_appearance())
 config.window_decorations = 'INTEGRATED_BUTTONS'
 
