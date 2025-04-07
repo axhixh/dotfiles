@@ -51,7 +51,7 @@ cask 'grandperspective'
 cask 'iina'
 cask 'insomnia'
 cask 'itsycal'
-cask 'mac-mouse-fix'
+cask 'linearmouse' # instead of mac-mouse-fix; alternative is mac-mouse-fix version 2 instead of 3
 cask 'macpass'
 #cask 'rectangle'
 cask 'the-unarchiver'
