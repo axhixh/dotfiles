@@ -100,8 +100,8 @@ local function scheme_for_appearance(appearance)
 end
 
 config.font_size = 16.0
---config.font = wezterm.font('Martian Mono Cn xLt')
-config.font = wezterm.font('Iosevka Term')
+--config.font = wezterm.font('Iosevka Term')
+config.font = wezterm.font('JuliaMono')
 config.color_scheme = scheme_for_appearance(get_appearance())
 config.window_decorations = 'INTEGRATED_BUTTONS'
 
