@@ -48,8 +48,6 @@
 
 [apply]
     whitespace = fix
-[diff]
-	external = difft
 [init]
 	defaultBranch = main
 [gitbutler]

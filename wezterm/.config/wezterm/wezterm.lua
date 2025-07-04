@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 local function segments_for_right_status(window)
   return {
     window:active_workspace(),
-    wezterm.strftime('%a %b %-d %H:%M'),
+    -- wezterm.strftime('%a %b %-d %H:%M'),
     -- wezterm.hostname(),
   }
 end
@@ -100,8 +100,8 @@ local function scheme_for_appearance(appearance)
 end
 
 config.font_size = 16.0
---config.font = wezterm.font('Iosevka Term')
-config.font = wezterm.font('JuliaMono')
+config.font = wezterm.font('Iosevka')
+-- config.font = wezterm.font('JuliaMono')
 config.color_scheme = scheme_for_appearance(get_appearance())
 config.window_decorations = 'INTEGRATED_BUTTONS'
 
