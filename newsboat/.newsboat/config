@@ -1,0 +1,2 @@
+browser "open -a zen %u"
+refresh-on-startup yes
