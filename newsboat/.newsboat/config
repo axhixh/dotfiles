@@ -1,2 +1,3 @@
-browser "open -a zen %u"
+browser "firefox %u"
 refresh-on-startup yes
+keep-articles-days 90
