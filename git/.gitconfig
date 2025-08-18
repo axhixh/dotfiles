@@ -4,7 +4,6 @@
 
 [core]
     excludesfile = ~/.gitignore_global
-    editor = hx
 
 [web]
     browser = firefox
