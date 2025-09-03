@@ -3,10 +3,6 @@ if test -e ~/.aliases
     source ~/.aliases
 end
 
-if test -e ~/.rvm/bin/rvm
-    rvm default
-end
-
 if test -e $HOME/.config/fish/environment
     source $HOME/.config/fish/environment
 end
