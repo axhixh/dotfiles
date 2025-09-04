@@ -1,0 +1,12 @@
+[tools]
+aws = "2.28.23"
+gradle = "8.14.3"
+java = "temurin-21.0.6+7.0.LTS"
+jj = "0.32.0"
+jjui = "0.9.3"
+koka = "3.2.2"
+kotlin = "2.2.10"
+python = "3.13.2"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node"]
