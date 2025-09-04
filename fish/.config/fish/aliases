@@ -20,3 +20,12 @@ alias mkdir='mkdir -p -v'
 alias tree="eza -h --tree"
 alias vi=hx
 alias vim=nvim
+
+if command -v neovide > /dev/null
+  alias nv="neovide"
+end
+
+if command -v helix > /dev/null
+  alias hx="helix"
+end
+

@@ -1,6 +1,6 @@
 # since these aliases are shared with bash, not converting these to functions
-if test -e ~/.aliases
-    source ~/.aliases
+if test -e $HOME/.config/fish/aliases
+    source $HOME/.config/fish/aliases
 end
 
 if test -e $HOME/.config/fish/environment
