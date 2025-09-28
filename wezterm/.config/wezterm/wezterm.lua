@@ -100,8 +100,10 @@ local function scheme_for_appearance(appearance)
 end
 
 config.font_size = 16.0
-config.font = wezterm.font('Iosevka')
--- config.font = wezterm.font('JuliaMono')
+-- maple mono is rounded font that works even on 127ppi screens
+config.font = wezterm.font('Maple Mono')
+-- similar to Victor Mono. Not that great on 127ppi screen
+-- config.font = wezterm.font('Iosevka')
 config.color_scheme = scheme_for_appearance(get_appearance())
 config.window_decorations = 'INTEGRATED_BUTTONS'
 
