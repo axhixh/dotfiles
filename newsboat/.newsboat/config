@@ -1,3 +1,5 @@
 browser "firefox %u"
 refresh-on-startup yes
-keep-articles-days 90
+# keep-articles-days 90
+max-items 1200
+download-full-page yes
