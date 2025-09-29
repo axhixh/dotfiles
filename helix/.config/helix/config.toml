@@ -14,9 +14,13 @@ newline = "none"
 tab = "→"
 tabpad = "·"
 
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
 [editor.lsp]
 display-messages = true
 
 [editor.soft-wrap]
-enable = true
+enable = false
 wrap-at-text-width = true 
