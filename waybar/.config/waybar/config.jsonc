@@ -1,0 +1,118 @@
+// vim: foldmethod=marker
+
+[{
+
+"output": "eDP-1",
+"include": "~/.config/waybar/config-global.jsonc",
+"position": "left", 
+
+"modules-left":	[
+	"idle_inhibitor",
+	"custom/mako",
+	"group/privacygroup",
+	"niri/workspaces", 
+],
+
+"modules-center": [
+	"niri/window",
+],
+
+"modules-right": [
+	"tray",
+	"backlight", 
+	"pulseaudio", 
+	"pulseaudio#source",
+	"network", 
+	"bluetooth",
+	"temperature", 
+	"keyboard-state",
+	"niri/language",
+	"battery",
+	"clock"
+],
+
+// PulseAudio {{{
+"pulseaudio": {
+	"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1% && $HOME/.config/waybar/scripts/progressbar.sh --volume 'eDP-1'",
+	"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1% && $HOME/.config/waybar/scripts/progressbar.sh --volume 'eDP-1'",
+},
+// }}}
+
+},
+{
+
+"output": ["DP-1"],
+"include": "~/.config/waybar/config-global.jsonc",
+"position": "right", 
+
+"modules-left": [
+	"idle_inhibitor",
+	"custom/mako",
+	"group/privacygroup",
+        "niri/workspaces", 
+],
+
+"modules-center": [
+	"niri/window",
+],
+
+"modules-right": [
+	"tray",
+	"pulseaudio", 
+	"pulseaudio#source",
+	"network", 
+	"bluetooth",
+	"temperature", 
+	"keyboard-state",
+	"niri/language",
+	"battery",
+	"clock"
+],
+
+// PulseAudio {{{
+"pulseaudio": {
+	"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1% && $HOME/.config/waybar/scripts/progressbar.sh --volume 'DP-1'",
+	"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1% && $HOME/.config/waybar/scripts/progressbar.sh --volume 'DP-1'",
+},
+// }}}
+
+},
+{
+
+"output": ["HEADLESS-1"],
+"include": "~/.config/waybar/config-global.jsonc",
+"position": "right", 
+
+"modules-left": [
+	"idle_inhibitor",
+	"custom/mako",
+	"group/privacygroup",
+        "niri/workspaces", 
+],
+
+"modules-center": [
+	"niri/window",
+],
+
+"modules-right": [
+	"tray",
+	"pulseaudio", 
+	"pulseaudio#source",
+	"network", 
+	"bluetooth",
+	"cpu", 
+	"memory", 
+	"temperature", 
+	"keyboard-state",
+	"battery",
+	"clock"
+],
+
+// PulseAudio {{{
+"pulseaudio": {
+	"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1% && $HOME/.config/waybar/scripts/progressbar.sh --volume 'HEADLESS-1'",
+	"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1% && $HOME/.config/waybar/scripts/progressbar.sh --volume 'HEADLESS-1'",
+},
+// }}}
+
+}]
