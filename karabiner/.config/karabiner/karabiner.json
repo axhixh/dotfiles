@@ -1,0 +1,91 @@
+{
+    "title": "Adds Nav Layer to Mac",
+    "maintainers": ["axhixh"],
+    "author": "Ashish Shrestha",
+    "homepage": "https://www.axhixh.com.np",
+    "profiles": [
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Change caps_lock to command when held and escape when tapped",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "to": [
+                                  {
+                                      "set_variable": {
+                                          "name": "nav_layer",
+                                          "value": 1
+                                        }
+                                  }  
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "nav_layer",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "type": "basic",
+                                "description": "hold caps lock key for navigation layer, tap for esc"
+                            },
+                            {
+                                "type": "basic",
+                                "description": "left arrow when nav layer is active",
+                                "from": {"key_code": "j"},
+                                "to": [{"key_code": "left_arrow"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "left arrow when nav layer is active",
+                                "from": {"key_code": "k"},
+                                "to": [{"key_code": "down_arrow"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "left arrow when nav layer is active",
+                                "from": {"key_code": "i"},
+                                "to": [{"key_code": "up_arrow"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "left arrow when nav layer is active",
+                                "from": {"key_code": "l"},
+                                "to": [{"key_code": "right_arrow"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 529,
+                        "vendor_id": 51966
+                    },
+                    "ignore": true
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        }
+    ]
+}
