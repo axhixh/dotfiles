@@ -82,6 +82,20 @@
                                 "from": {"key_code": "o"},
                                 "to": [{"key_code": "end"}],
                                 "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "page up when nav layer is active",
+                                "from": {"key_code": "y"},
+                                "to": [{"key_code": "page_up"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "page down when nav layer is active",
+                                "from": {"key_code": "h"},
+                                "to": [{"key_code": "page_down"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
                             }
                         ]
                     }
