@@ -50,23 +50,37 @@
                             },
                             {
                                 "type": "basic",
-                                "description": "left arrow when nav layer is active",
+                                "description": "down arrow when nav layer is active",
                                 "from": {"key_code": "k"},
                                 "to": [{"key_code": "down_arrow"}],
                                 "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
                             },
                             {
                                 "type": "basic",
-                                "description": "left arrow when nav layer is active",
+                                "description": "up arrow when nav layer is active",
                                 "from": {"key_code": "i"},
                                 "to": [{"key_code": "up_arrow"}],
                                 "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
                             },
                             {
                                 "type": "basic",
-                                "description": "left arrow when nav layer is active",
+                                "description": "right arrow when nav layer is active",
                                 "from": {"key_code": "l"},
                                 "to": [{"key_code": "right_arrow"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "home when nav layer is active",
+                                "from": {"key_code": "u"},
+                                "to": [{"key_code": "home"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "end when nav layer is active",
+                                "from": {"key_code": "o"},
+                                "to": [{"key_code": "end"}],
                                 "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
                             }
                         ]
