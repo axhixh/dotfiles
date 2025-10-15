@@ -1,9 +1,9 @@
 [tools]
 aws = "2.28.23"
 gradle = "8.14.3"
-java = "temurin-21.0.6+7.0.LTS"
+java = "temurin-25.0.0+36.0.LTS"
 jj = "0.34.0"
-jjui = "0.9.3"
+jjui = "0.9.4"
 koka = "3.2.2"
 kotlin = "2.2.20"
 python = "3.14.0"
