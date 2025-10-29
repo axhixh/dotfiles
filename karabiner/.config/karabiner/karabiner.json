@@ -131,6 +131,34 @@
                                 "from": {"key_code": "4"},
                                 "to": [{"key_code": "4", "modifiers": ["left_alt"]}],
                                 "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "spotlight",
+                                "from": {"key_code": "spacebar"},
+                                "to": [{"key_code": "spacebar", "modifiers": ["left_command"]}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "mute",
+                                "from": {"key_code": "m"},
+                                "to": [{"consumer_key_code": "mute"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "vol up",
+                                "from": {"key_code": "comma"},
+                                "to": [{"consumer_key_code": "volume_decrement"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "vol down",
+                                "from": {"key_code": "period"},
+                                "to": [{"consumer_key_code": "volume_increment"}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
                             }
                         ]
                     }
