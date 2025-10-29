@@ -103,6 +103,34 @@
                                 "from": {"key_code": "p"},
                                 "to": [{"key_code": "4", "modifiers": ["left_command", "left_shift"]}],
                                 "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "workspace 1",
+                                "from": {"key_code": "1"},
+                                "to": [{"key_code": "1", "modifiers": ["left_alt"]}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "workspace 2",
+                                "from": {"key_code": "2"},
+                                "to": [{"key_code": "2", "modifiers": ["left_alt"]}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "workspace 3",
+                                "from": {"key_code": "3"},
+                                "to": [{"key_code": "3", "modifiers": ["left_alt"]}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "workspace 4",
+                                "from": {"key_code": "4"},
+                                "to": [{"key_code": "4", "modifiers": ["left_alt"]}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
                             }
                         ]
                     }
