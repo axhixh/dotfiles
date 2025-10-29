@@ -96,6 +96,13 @@
                                 "from": {"key_code": "h"},
                                 "to": [{"key_code": "page_down"}],
                                 "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "screenshot",
+                                "from": {"key_code": "p"},
+                                "to": [{"key_code": "4", "modifiers": ["left_command", "left_shift"]}],
+                                "conditions": [{"name": "nav_layer", "type": "variable_if", "value": 1}]
                             }
                         ]
                     }
