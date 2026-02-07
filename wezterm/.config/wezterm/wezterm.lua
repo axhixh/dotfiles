@@ -92,11 +92,11 @@ local function get_appearance()
 end
 
 local function scheme_for_appearance(appearance)
-  if appearance:find 'Dark' then
+  --if appearance:find 'Dark' then
     return 'Tokyo Night'
-  else
-    return 'Tokyo Night Light (Gogh)'
-  end
+  --else
+  --  return 'Tokyo Night Light (Gogh)'
+  --end
 end
 
 config.font_size = 16.0

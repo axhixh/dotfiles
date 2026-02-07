@@ -1,4 +1,5 @@
-browser "firefox %u"
+browser w3m
+macro f set browser "firefox %u"; open-in-browser-noninteractively; set browser w3m
 refresh-on-startup yes
 # keep-articles-days 90
 max-items 1200
