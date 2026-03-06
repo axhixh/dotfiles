@@ -1,0 +1,47 @@
+;; my layout based on qwerty laptop keyboard.
+(defcfg
+  process-unmapped-keys yes)
+
+(defvar
+  tap-time 200
+  hold-time 250
+)
+
+(defalias
+  nav (layer-while-held nav)
+  esc-n (tap-hold $tap-time $hold-time esc @nav)
+  q-n (tap-hold $tap-time $hold-time ' @nav)
+
+  ;; base-row mod
+  v-m (tap-hold $tap-time $hold-time v lmeta)
+  m-m (tap-hold $tap-time $hold-time m rmeta)
+  c-c (tap-hold $tap-time $hold-time c lctl)
+  comma-c (tap-hold $tap-time $hold-time , rctl)
+  
+  cwt (caps-word-toggle 2000)
+  sshot M-r
+  lock M-A-e
+  z+ C-S-=
+  z0 C-0
+  z- C--
+)
+
+(defsrc
+esc q w e r t y u i o p
+caps a s d f g h j k l ; '
+lsft z x c v b n m , . / rsft
+lctrl lmeta spc rmeta
+)
+
+(deflayer default
+@cwt q w e r t y u i o p
+@esc-n a s d f g h j k l ; @q-n
+lsft z x @c-c @v-m b n @m-m @comma-c . / rsft
+lmeta lctrl spc rctrl
+)
+
+(deflayer nav
+caps @lock w M-e @sshot t pgup home up end p
+esc a s d M-f g pgdn lft down rght ; '
+lsft z x @c-c @v-m b n @m-m @comma-c . / rsft
+lmeta lctrl M-spc rctrl)
