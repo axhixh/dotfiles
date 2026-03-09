@@ -12,6 +12,8 @@
   esc-n (tap-hold $tap-time $hold-time esc @nav)
   q-n (tap-hold $tap-time $hold-time ' @nav)
 
+  num (layer-while-held num)
+
   ;; base-row mod
   v-m (tap-hold $tap-time $hold-time v lmeta)
   m-m (tap-hold $tap-time $hold-time m rmeta)
@@ -30,18 +32,25 @@
 esc q w e r t y u i o p
 caps a s d f g h j k l ; '
 lsft z x c v b n m , . / rsft
-lctrl lmeta spc rmeta
+lctl lmeta spc rmeta
 )
 
 (deflayer default
 @cwt q w e r t y u i o p
 @esc-n a s d f g h j k l ; @q-n
 lsft z x @c-c @v-m b n @m-m @comma-c . / rsft
-lmeta lctrl spc rctrl
+lmeta lctl spc @num
 )
 
 (deflayer nav
 caps @lock w M-e @sshot t pgup home up end p
 esc a s d M-f g pgdn lft down rght ; '
 lsft z x @c-c @v-m b n @m-m @comma-c . / rsft
-lmeta lctrl M-spc rctrl)
+lmeta lctl M-spc @num)
+
+(deflayer num
+esc  S-1 S-2 S-3 S-4 S-5 S-6 S-7 S-8 S-9 S-0
+caps 1 2 3 4 5 h j k l ; '
+lsft 6 7 8 9 0 n rmeta rctl . / rsft
+lmeta lctl spc XX
+)
