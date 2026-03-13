@@ -1,4 +1,5 @@
 fish/.config/fish/fish_variables
+karabiner/.config/karabiner/automatic_backups
 neovim/.config/nvim/lazy-lock.json
 helix/.config/helix/runtime/
 Brewfile.lock.json
