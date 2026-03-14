@@ -19,13 +19,11 @@
   m-m (tap-hold $tap-time $hold-time m rmeta)
   c-c (tap-hold $tap-time $hold-time c lctl)
   comma-c (tap-hold $tap-time $hold-time , rctl)
-  
+
   cwt (caps-word-toggle 2000)
   sshot M-r
   lock M-A-e
-  z+ C-S-=
-  z0 C-0
-  z- C--
+
 )
 
 (defsrc
@@ -49,8 +47,8 @@ lsft z x @c-c @v-m b n @m-m @comma-c . / rsft
 lmeta lctl M-spc @num)
 
 (deflayer num
-esc  S-1 S-2 S-3 S-4 S-5 S-6 S-7 S-8 S-9 S-0
-caps 1 2 3 4 5 h j k l ; '
+@cwt S-1 S-2 S-3 S-4 S-5 S-6 S-7 S-8 S-9 S-0
+@esc-n 1 2 3 4 5 h j k l ; '
 lsft 6 7 8 9 0 n rmeta rctl . / rsft
 lmeta lctl spc XX
 )
