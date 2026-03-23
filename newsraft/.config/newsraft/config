@@ -1,0 +1,2 @@
+item-limit 1200
+bind w exec w3m %l
