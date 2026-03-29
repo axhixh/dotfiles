@@ -44,8 +44,6 @@ http://www.dpreview.com/feeds/news.xml
 http://fujifilmblog.wordpress.com/feed/
 http://feeds.feedburner.com/FlowingData
 http://www.guardian.co.uk/news/datablog/rss
-http://www.stat.columbia.edu/~cook/movabletype/mlm/atom.xml
-http://junkcharts.typepad.com/junk_charts/atom.xml
 http://www.storytellingwithdata.com/blog?format=RSS
 http://feeds.feedburner.com/JetPensBlog
 http://blog.andersonpens.net/feed/
@@ -53,7 +51,7 @@ http://edjelley.com/feed/
 https://kbd.news/rss2.php
 http://www.gentlemanstationer.com/blog?format=rss
 http://wellappointeddesk.com/feed/
-http://blog.oscarliang.net/feed/
+https://oscarliang.com/feed/
 http://www.sbrebrown.com/feed/
 http://feeds.feedburner.com/penaddict/XQKI
 https://www.axhixh.com.np/axhixh.atom
@@ -62,7 +60,7 @@ http://om.co/feed/
 http://www.theregister.co.uk/headlines.atom
 http://news.ycombinator.com/rss
 #https://stratechery.com/feed/
-http://feeds.searchengineland.com/searchengineland
+https://searchengineland.com/feed
 https://longform.asmartbear.com/index.xml
 https://www.joanwestenberg.com/feed/
 https://pluralistic.net/feed/
