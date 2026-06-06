@@ -15,3 +15,12 @@ config = { preview.background.enabled = true, preview.background.args = ["--data
 [[language]]
 name = "typst"
 language-servers = ["tinymist"]
+
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+config = { diagnostics = true, formatting = true }
+
+[[language]]
+name = "ruby"
+language-servers = ["ruby-lsp"]
+auto-format = true
