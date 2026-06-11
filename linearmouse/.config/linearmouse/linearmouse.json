@@ -1,0 +1,155 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.2",
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x2048",
+          "productName" : "Kensington Eagle Trackball",
+          "vendorID" : "0x47d"
+        }
+      },
+      "scrolling" : {
+        "modifiers" : {
+          "vertical" : {
+            "command" : {
+              "type" : "zoom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "mouse.button.back",
+            "button" : 3,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : "mouse.button.forward",
+            "button" : 4,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          }
+        ],
+        "universalBackForward" : false
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x40",
+          "productName" : "ProtoArc EM03",
+          "vendorID" : "0x1915"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : 1,
+        "distance" : {
+          "horizontal" : "auto"
+        },
+        "modifiers" : {
+          "horizontal" : {
+            "command" : {
+              "type" : "preventDefault"
+            }
+          },
+          "vertical" : {
+            "command" : {
+              "type" : "zoom"
+            }
+          }
+        },
+        "speed" : {
+          "horizontal" : 4.97,
+          "vertical" : 1.57
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "mouse.button.left",
+            "button" : 2,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : "mouse.button.middle",
+            "button" : 3,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          },
+          {
+            "action" : "mouse.wheel.scrollDown",
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "scroll" : "left",
+            "shift" : false
+          },
+          {
+            "action" : "mouse.wheel.scrollUp",
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "scroll" : "right",
+            "shift" : false
+          }
+        ],
+        "switchPrimaryButtonAndSecondaryButtons" : true
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xfaa0",
+          "productName" : "Nulea BT5.0 ",
+          "vendorID" : "0x25a7"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 1.05,
+        "disableAcceleration" : false,
+        "redirectsToScroll" : false,
+        "speed" : 0.039
+      },
+      "scrolling" : {
+        "modifiers" : {
+          "vertical" : {
+            "command" : {
+              "type" : "pinchZoom"
+            }
+          }
+        },
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "switchPrimaryButtonAndSecondaryButtons" : true
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x5",
+          "productName" : "USB Optical Mouse",
+          "vendorID" : "0x1bcf"
+        }
+      }
+    }
+  ]
+}
