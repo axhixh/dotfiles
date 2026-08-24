@@ -21,11 +21,11 @@ switch (uname)
     case Linux
         set -x CANGJIE_HOME "/opt/cangjie"
         if set -q LD_LIBRARY_PATH
-          set -x LD_LIBRARY_PATH $CANGJIE_HOME/runtime/lib/linux_x86_64_llvm $LD_LIBRARY_PATH
+          # set -x LD_LIBRARY_PATH $CANGJIE_HOME/runtime/lib/linux_x86_64_llvm $LD_LIBRARY_PATH
         else
-          set -x LD_LIBRARY_PATH $CANGJIE_HOME/runtime/lib/linux_x86_64_llvm
+          # set -x LD_LIBRARY_PATH $CANGJIE_HOME/runtime/lib/linux_x86_64_llvm
         end
 
 end
 
-set -x PATH $HOME/bin $HOME/.local/bin /opt/homebrew/bin $CANGJIE_HOME/bin $PATH 
+set -x PATH $HOME/bin $HOME/.local/bin $PATH /opt/homebrew/bin $CANGJIE_HOME/bin $CANGJIE_HOME/tools/bin 
