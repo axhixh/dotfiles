@@ -7,7 +7,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Change caps_lock to command when held and escape when tapped",
+                        "description": "Support nav layer and enable colemak dh on laptop keyboard",
                         "manipulators": [
                             {
                                 "conditions": [
