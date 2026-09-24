@@ -43,10 +43,7 @@ wezterm.on('update-status', function(window, _)
   window:set_right_status(wezterm.format(elements))
 end)
 
-local config = {}
-if wezterm.config_builder then
-  config = wezterm.config_builder()
-end
+local config = wezterm.config_builder()
 
 -- panes
 local act = wezterm.action
@@ -99,11 +96,17 @@ local function scheme_for_appearance(appearance)
   --end
 end
 
-config.font_size = 16.0
--- maple mono is rounded font that works even on 127ppi screens
-config.font = wezterm.font('Maple Mono')
--- similar to Victor Mono. Not that great on 127ppi screen
--- config.font = wezterm.font('Iosevka')
+config.line_height = 1.05 -- slightly more breathing room than default
+config.font_size = 14.5
+local is_macos = wezterm.target_triple:find('darwin') ~= nil
+local screen = wezterm.gui.get_screen_info()
+
+if is_macos or screen.dpi > 140 then
+  config.font = wezterm.font('Victor Mono')
+else
+  -- maple mono is rounded font that works even on 127ppi screens
+  config.font = wezterm.font('Maple Mono')
+end 
 config.color_scheme = scheme_for_appearance(get_appearance())
 config.window_decorations = 'INTEGRATED_BUTTONS'
 
