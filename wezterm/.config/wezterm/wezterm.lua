@@ -2,9 +2,7 @@ local wezterm = require 'wezterm'
 
 local function segments_for_right_status(window)
   return {
-    window:active_workspace(),
-    -- wezterm.strftime('%a %b %-d %H:%M'),
-    -- wezterm.hostname(),
+    wezterm.strftime('%Y-%m-%d %H:%M %a'),
   }
 end
 
