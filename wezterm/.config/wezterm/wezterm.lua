@@ -45,42 +45,6 @@ end)
 
 local config = wezterm.config_builder()
 
--- panes
-local act = wezterm.action
-
-config.keys = {
-  {
-    key = "PageUp",
-    mods = 'ALT|CTRL',
-    action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
-  },
-  {
-    key = "PageDown",
-    mods = 'ALT|CTRL',
-    action = act.SplitVertical { domain = 'CurrentPaneDomain' },
-  },
-  {
-    key = "UpArrow",
-    mods = "ALT",
-    action = act.ActivatePaneDirection('Up')
-  },
-  {
-    key = "DownArrow",
-    mods = "ALT",
-    action = act.ActivatePaneDirection('Down')
-  },
-  {
-    key = "LeftArrow",
-    mods = "ALT",
-    action = act.ActivatePaneDirection('Left')
-  },
-  {
-    key = "RightArrow",
-    mods = "ALT",
-    action = act.ActivatePaneDirection('Right')
-  },
-}
-
 local function get_appearance()
   if wezterm.gui then
     return wezterm.gui.get_appearance()
@@ -97,15 +61,14 @@ local function scheme_for_appearance(appearance)
 end
 
 config.line_height = 1.05 -- slightly more breathing room than default
-config.font_size = 14.5
-local is_macos = wezterm.target_triple:find('darwin') ~= nil
-local screen = wezterm.gui.get_screen_info()
-
-if is_macos or screen.dpi > 140 then
-  config.font = wezterm.font('Victor Mono')
-else
+local hostname = wezterm.hostname()
+if hostname == 'macbookair62' then
   -- maple mono is rounded font that works even on 127ppi screens
   config.font = wezterm.font('Maple Mono')
+  config.font_size = 14.5
+else
+  config.font = wezterm.font('Victor Mono')
+  config.font_size = 15.5
 end 
 config.color_scheme = scheme_for_appearance(get_appearance())
 config.window_decorations = 'INTEGRATED_BUTTONS'
