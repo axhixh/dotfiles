@@ -11,21 +11,13 @@
 (defalias
   nav (layer-while-held nav)
   esc-n (tap-hold $tap-time $hold-time esc @nav)
-  q-n (tap-hold $tap-time $hold-time ' @nav)
 
   num (layer-while-held num)
-
-  ;; base-row mod
-  v-m (tap-hold $tap-time $hold-time v lmeta)
-  m-m (tap-hold $tap-time $hold-time m rmeta)
-  c-c (tap-hold $tap-time $hold-time c lctl)
-  comma-c (tap-hold $tap-time $hold-time , rctl)
   s-s (tap-hold $tap-time $hold-time spc @num)
 
   cwt (caps-word-toggle 2000)
   sshot M-r
   lock M-A-e
-
 )
 
 (defsrc
@@ -37,16 +29,16 @@ lctl lmeta spc rmeta
 
 (deflayer default
 @cwt q w e r t y u i o p
-@esc-n a s d f g h j k l ; @q-n
-lsft z x @c-c @v-m b n @m-m @comma-c . / rsft
+@esc-n a s d f g h j k l ; '
+lsft z x c v b n m , . / rsft
 lmeta lctl @s-s rmeta
 )
 
 (deflayer nav
 caps @lock w M-e @sshot t pgup home up end p
 esc a s d M-f g pgdn lft down rght ; '
-lsft z x @c-c @v-m b n @m-m @comma-c . / rsft
-lmeta lctl M-spc @num)
+lsft z x c v b n m , . / rsft
+lmeta lctl M-spc rmeta)
 
 (deflayer num
 @cwt S-1 S-2 S-3 S-4 S-5 S-6 S-7 S-8 S-9 S-0
